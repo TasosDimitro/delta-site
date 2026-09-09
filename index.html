@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Delta Technologies — Software that runs real businesses</title>
+<meta name="description" content="Delta Technologies builds and operates business software: SaaS products, custom applications and long-term support. Based in Spata, Greece.">
+<link rel="canonical" href="https://deltatechnologies.gr/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Delta Technologies">
+<meta property="og:description" content="Software that runs real businesses. SaaS products, custom applications and long-term support.">
+<meta property="og:url" content="https://deltatechnologies.gr/">
+<meta name="theme-color" content="#2A3550">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 90'><path d='M50 8 L9 79 H72' fill='none' stroke='%232A3550' stroke-width='15'/><path d='M66 30 L93 78' fill='none' stroke='%232B6FE8' stroke-width='14'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#2A3550;
+    --navy-deep:#1D2537;
+    --blue:#2B6FE8;
+    --bg:#ffffff;
+    --surface:#f6f8fb;
+    --text:#2A3550;
+    --muted:#6b7688;
+    --line:#e5e9f0;
+    --radius:14px;
+    --max:1080px;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#141a26;
+      --surface:#1b2231;
+      --text:#e8ecf4;
+      --muted:#9aa5b8;
+      --line:#2a3448;
+      --navy:#e8ecf4;
+    }
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    font-size:16px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--blue);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+  h1,h2,h3{line-height:1.2;letter-spacing:-.02em;margin:0}
+
+  /* Header */
+  header{
+    position:sticky;top:0;z-index:10;
+    background:color-mix(in srgb, var(--bg) 88%, transparent);
+    backdrop-filter:saturate(160%) blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:14px 24px;max-width:var(--max);margin:0 auto}
+  .brand{display:flex;align-items:center;gap:11px;color:var(--text)}
+  .brand:hover{text-decoration:none}
+  .brand svg{width:30px;height:27px;flex:none}
+  .brand b{font-weight:700;letter-spacing:.14em;font-size:15px;text-transform:uppercase}
+  .nav nav{display:flex;gap:22px;flex-wrap:wrap}
+  .nav nav a{color:var(--muted);font-size:14px;font-weight:500}
+  .nav nav a:hover{color:var(--blue);text-decoration:none}
+
+  /* Buttons */
+  .btn{
+    display:inline-block;padding:13px 24px;border-radius:10px;
+    font-weight:600;font-size:15px;min-height:46px;
+  }
+  .btn-primary{background:var(--blue);color:#fff}
+  .btn-primary:hover{background:#1e5fd0;text-decoration:none}
+  .btn-ghost{border:1px solid var(--line);color:var(--text)}
+  .btn-ghost:hover{border-color:var(--blue);color:var(--blue);text-decoration:none}
+
+  /* Hero */
+  .hero{padding:clamp(56px,10vw,110px) 0 clamp(48px,8vw,86px)}
+  .hero .mark{width:74px;height:66px;margin-bottom:28px}
+  .hero h1{font-size:clamp(32px,5.6vw,54px);max-width:16ch;font-weight:700}
+  .hero p{font-size:clamp(17px,2.2vw,20px);color:var(--muted);max-width:60ch;margin:22px 0 34px}
+  .hero .actions{display:flex;gap:12px;flex-wrap:wrap}
+
+  section{padding:clamp(48px,7vw,80px) 0;border-top:1px solid var(--line)}
+  .eyebrow{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--blue);margin-bottom:12px}
+  section h2{font-size:clamp(24px,3.4vw,34px);font-weight:700}
+  section > .wrap > p.lead{color:var(--muted);max-width:62ch;margin:14px 0 0}
+
+  .grid{display:grid;gap:20px;margin-top:38px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:28px}
+  .card h3{font-size:18px;font-weight:600;margin-bottom:10px}
+  .card p{color:var(--muted);margin:0;font-size:15px}
+
+  /* Product */
+  .product{display:flex;gap:28px;align-items:flex-start;flex-wrap:wrap;margin-top:36px;
+    background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:32px}
+  .product .body{flex:1 1 320px;min-width:0}
+  .product h3{font-size:22px;font-weight:700;margin-bottom:6px}
+  .product .tag{display:inline-block;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;
+    color:var(--blue);background:color-mix(in srgb,var(--blue) 12%,transparent);padding:4px 10px;border-radius:999px;margin-bottom:14px}
+  .product p{color:var(--muted);margin:0 0 18px}
+
+  /* Why */
+  .points{display:grid;gap:26px;margin-top:38px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+  .point{border-left:3px solid var(--blue);padding-left:18px}
+  .point h3{font-size:16px;font-weight:600;margin-bottom:6px}
+  .point p{color:var(--muted);margin:0;font-size:15px}
+
+  /* Contact */
+  .contact-grid{display:grid;gap:20px;margin-top:36px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+  .field p{margin:0}
+  .field .label{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+  .field .value{font-size:16px;font-weight:500;word-break:break-word}
+
+  footer{border-top:1px solid var(--line);padding:32px 0;color:var(--muted);font-size:14px}
+  .foot{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;align-items:center}
+  .foot a{color:var(--muted)}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a class="brand" href="#top">
+      <svg viewBox="0 0 100 90" aria-hidden="true"><path d="M50 8 L9 79 H72" fill="none" stroke="currentColor" stroke-width="15" stroke-linejoin="miter"/><path d="M66 30 L93 78" fill="none" stroke="#2B6FE8" stroke-width="14"/></svg>
+      <b>Delta Technologies</b>
+    </a>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#products">Products</a>
+      <a href="#approach">Approach</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <div class="hero wrap">
+    <svg class="mark" viewBox="0 0 100 90" aria-label="Delta Technologies"><path d="M50 8 L9 79 H72" fill="none" stroke="currentColor" stroke-width="15" stroke-linejoin="miter"/><path d="M66 30 L93 78" fill="none" stroke="#2B6FE8" stroke-width="14"/></svg>
+    <h1>Software that runs real businesses.</h1>
+    <p>We design, build and operate the systems companies depend on every day — from full SaaS platforms to custom internal tools. Not prototypes. Software in production, with people behind it.</p>
+    <div class="actions">
+      <a class="btn btn-primary" href="mailto:info@mydrive.gr">Get in touch</a>
+      <a class="btn btn-ghost" href="#services">What we do</a>
+    </div>
+  </div>
+
+  <section id="services">
+    <div class="wrap">
+      <p class="eyebrow">Services</p>
+      <h2>What we do</h2>
+      <p class="lead">A small team that takes a product from the first conversation to the version your customers use.</p>
+      <div class="grid">
+        <div class="card">
+          <h3>SaaS product development</h3>
+          <p>Multi-tenant web platforms built end to end — architecture, backend, interface, billing and deployment. Built to grow past the first hundred customers.</p>
+        </div>
+        <div class="card">
+          <h3>Custom business software</h3>
+          <p>Applications shaped around how your company actually works: scheduling, records, documents, reporting and the integrations that tie them together.</p>
+        </div>
+        <div class="card">
+          <h3>Support &amp; operations</h3>
+          <p>We stay after launch. Monitoring, backups, updates and a direct line when something needs attention — no ticket queue, no outsourced desk.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="products">
+    <div class="wrap">
+      <p class="eyebrow">Products</p>
+      <h2>Built and run by us</h2>
+      <p class="lead">We don't only build for clients. Our own products carry real customers in production.</p>
+      <div class="product">
+        <div class="body">
+          <span class="tag">Live product</span>
+          <h3>MyDrive</h3>
+          <p>A complete management platform for driving schools: students, instructors, vehicles, scheduling, exams, documents and payments — in one place, in Greek, used daily by schools across the country.</p>
+          <a class="btn btn-ghost" href="https://mydrive.gr" target="_blank" rel="noopener">Visit mydrive.gr</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="approach">
+    <div class="wrap">
+      <p class="eyebrow">Approach</p>
+      <h2>Why work with us</h2>
+      <div class="points">
+        <div class="point">
+          <h3>We run what we build</h3>
+          <p>Our own platform is in production with paying customers. We know what breaks at 9am on a Monday, because we answer for it.</p>
+        </div>
+        <div class="point">
+          <h3>Direct communication</h3>
+          <p>You talk to the people writing the code. No account managers translating between you and the work.</p>
+        </div>
+        <div class="point">
+          <h3>Built to last</h3>
+          <p>Tested, documented, maintainable systems on proven technology — not whatever framework was announced last month.</p>
+        </div>
+        <div class="point">
+          <h3>Local, and available</h3>
+          <p>A Greek company, working in Greek and English, in your time zone and reachable when it matters.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <p class="eyebrow">Contact</p>
+      <h2>Let's talk about your project</h2>
+      <p class="lead">Tell us what you're trying to build or fix. We'll answer honestly whether we're the right people for it.</p>
+      <div class="contact-grid">
+        <div class="field">
+          <p class="label">Email</p>
+          <p class="value"><a href="mailto:info@mydrive.gr">info@mydrive.gr</a></p>
+        </div>
+        <div class="field">
+          <p class="label">Address</p>
+          <p class="value">K. Dimitriou 5<br>Spata 190 04, Greece</p>
+        </div>
+        <div class="field">
+          <p class="label">VAT number</p>
+          <p class="value">803386643</p>
+        </div>
+        <div class="field">
+          <p class="label">Tax office</p>
+          <p class="value">ΔΟΥ ΚΕΦΟΔΕ Αττικής</p>
+        </div>
+      </div>
+      <p style="margin-top:32px"><a class="btn btn-primary" href="mailto:info@mydrive.gr">Send us an email</a></p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <span>© <span id="year">2026</span> Delta Technologies. All rights reserved.</span>
+    <span><a href="privacy.html">Privacy Policy</a></span>
+  </div>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear()</script>
+</body>
+</html>
